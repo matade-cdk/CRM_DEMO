@@ -1,0 +1,75 @@
+/* ============================================
+   Departments Page — exact Figma layout
+   ============================================ */
+.dept-page {
+  width: 100%;
+  max-width: 995px;
+}
+
+/* ---- Header ---- */
+.dept-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 37px;
+}
+
+.dept-page__title {
+  font-size: 24.64px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 23px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.dept-page__add-btn {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 9.04px;
+  font-weight: 400;
+  padding: 8px 16px;
+  border-radius: 5.96px;
+  border: none;
+  cursor: pointer;
+  transition: background var(--t);
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 9.59px;
+  height: 26px;
+}
+
+.dept-page__add-btn:hover {
+  background: var(--primary);
+}
+
+/* ---- Grid Container ---- */
+.dept-page__grid-container {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  padding: 25px;
+  width: 100%;
+  max-width: 995px;
+}
+
+/* ---- Grid — 3 columns, exact spacing ---- */
+.dept-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 308px);
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .dept-page__grid { 
+    grid-template-columns: repeat(2, 308px); 
+  }
+}
+
+@media (max-width: 720px) {
+  .dept-page__grid { 
+    grid-template-columns: 308px; 
+  }
+  .dept-page__grid-container {
+    padding: 15px;
+  }
+}

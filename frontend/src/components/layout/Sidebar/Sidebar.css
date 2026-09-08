@@ -1,0 +1,150 @@
+/* ============================================
+   Sidebar — exact reference image style
+   ============================================ */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: #D5DCEF;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 200;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-left: 34px;
+  padding-right: 17.91px;
+  padding-top: 16px;
+}
+
+/* ── Logo ── */
+.sidebar__logo {
+  padding-bottom: 26px;
+  flex-shrink: 0;
+}
+.sidebar__logo-img {
+  width: 142.8px;
+  height: 51px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Nav ── */
+.sidebar__nav { flex: 1; padding-top: 0; }
+.sidebar__section { margin-bottom: 6px; }
+
+.sidebar__section-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 6px 0;
+}
+.sidebar__section-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #4A4A4A;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.sidebar__hamburger {
+  display: flex; align-items: center;
+  color: #4A4A4A;
+}
+.sidebar__chevron {
+  display: flex; align-items: center;
+}
+.sidebar__chevron-img {
+  width: 10.31px; height: 5.73px;
+  object-fit: contain;
+}
+
+.sidebar__list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 2px; 
+}
+
+/* ── Link ── */
+.sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  color: #3D3D3D;
+  font-size: 10.5px;
+  font-weight: 400;
+  line-height: 1.3;
+  font-family: Helvetica, Arial, sans-serif;
+  transition: all 0.2s ease;
+  border-radius: 50px;
+  position: relative;
+}
+
+/* ── Active State - White pill with navy circle icon ── */
+.sidebar__link--active {
+  background: #FFFFFF !important;
+  color: #000550 !important;
+  border: 2px solid #000550;
+  padding: 5px 10px;
+  font-weight: 500;
+}
+
+/* Active icon gets navy circle background */
+.sidebar__link--active .sidebar__icon-wrap {
+  background: #000550;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* Active icon becomes white */
+.sidebar__link--active .sidebar__nav-icon {
+  filter: brightness(0) invert(1);
+}
+
+.sidebar__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; 
+  height: 24px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.sidebar__nav-icon {
+  width: 14px; 
+  height: 14px;
+  object-fit: contain;
+  display: block;
+  filter: none;
+  transition: filter 0.2s ease;
+}
+
+.sidebar__label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Logout ── */
+.sidebar__logout-wrap {
+  padding: 10px 0 16px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+  margin-top: auto;
+}
+.sidebar__logout {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 4px 0;
+  width: 100%;
+  transition: color var(--t);
+}
+.sidebar__logout:hover { color: var(--error); }

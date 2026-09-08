@@ -1,0 +1,38 @@
+/* ============================================
+   CRM Design Tokens — exact Figma colors
+   ============================================ */
+:root {
+  --selected:        #0724FD;
+  --selected-hover:  #5A60FE;
+  --primary:         #0735D9;
+  --secondary:       #5870B6;
+  --accent:          #5A87FE;
+  --dark:            #0F172A;
+  --black:           #000000;
+  --navy:            #000550;
+  --white:           #FFFFFF;
+  --gray-dark:       #4C4C4C;
+  --gray:            #858585;
+  --gray-light:      #8B8B8B;
+  --light-bg:        #D4DDFF;
+  --light-selected:  #B9BAFF;
+  --error:           #FF0303;
+
+  --bg-app:          #F0F3FF;
+  --bg-sidebar:      #D4DDFF;
+  --bg-topbar:       #FFFFFF;
+  --border:          #E4E7EE;
+
+  --sidebar-w:       225px;
+  --topbar-h:        62px;
+
+  --r-sm:   6px;
+  --r-md:   10px;
+  --r-lg:   10px;
+
+  --shadow-sidebar: 2px 0 12px rgba(7,36,253,0.06);
+  --shadow-card:    0 2px 10px rgba(7,36,253,0.07);
+  --shadow-btn:     0 4px 14px rgba(7,36,253,0.38);
+
+  --t: 0.18s ease;
+}

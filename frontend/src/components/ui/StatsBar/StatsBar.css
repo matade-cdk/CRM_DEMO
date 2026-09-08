@@ -1,0 +1,87 @@
+/* ============================================
+   Stats Bar — exact Figma layout
+   5 columns, labels ABOVE values
+   ============================================ */
+.stats-bar {
+  background: var(--white);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 22px;
+  padding: 12px 17px 15px 15px;
+  width: 100%;
+  max-width: 995px;
+}
+
+.stats-bar__inner {
+  background: var(--bg-app);
+  border-radius: var(--r-lg);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  padding: 12px 10px;
+  min-height: 54px;
+}
+
+.stats-bar__cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 15px;
+  position: relative;
+}
+.stats-bar__cell:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background: var(--border);
+}
+
+/* Top row - label ABOVE count */
+.stats-bar__top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  margin-bottom: 6px;
+}
+.stats-bar__count-label {
+  font-size: 8px;
+  font-weight: 400;
+  color: var(--gray-light);
+  line-height: 1.2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.stats-bar__count {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.3;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Bottom row - label ABOVE amount */
+.stats-bar__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.stats-bar__sub-label {
+  font-size: 8px;
+  font-weight: 400;
+  color: var(--gray-light);
+  line-height: 1.2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.stats-bar__amount {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.3;
+  font-family: Helvetica, Arial, sans-serif;
+}
